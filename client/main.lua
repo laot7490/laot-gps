@@ -182,7 +182,6 @@ RefreshBlips = function()
 end
 
 DisableGPS = function()
-	print("laot#2599 disabling gps.")
 
 	for existingblipid, existingblip in pairs(LAOTGPS.RealBlips) do
 		RemoveBlip(existingblip)
