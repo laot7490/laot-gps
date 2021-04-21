@@ -4,7 +4,7 @@
 ESX = nil
 LAOT = nil
 
-TriggerEvent('LAOTCore:getSharedObject', function(obj) LAOT = obj end)
+TriggerEvent('LAOTCore:GetObject', function(obj) LAOT = obj end)
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 LAOTGPS = {}
@@ -18,7 +18,7 @@ ESX.RegisterUsableItem('laot_gps', function(source)
 
     if scriptadi == 'laot-gps' then
         TriggerClientEvent("laot-gps:client:UseGPS", source)
-    else TriggerClientEvent("LAOTCore:Notification", source, "error", "Scriptin adını (laot-gps) olarak ayarlayınız.") end
+    else TriggerClientEvent("LAOTCore:Client:Notify", source, "error", "Scriptin adını (laot-gps) olarak ayarlayınız.") end
 end)
 
 RegisterNetEvent("laot-gps:server:RequestSync")

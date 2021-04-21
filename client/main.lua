@@ -6,8 +6,6 @@
 	██║░░░░░██╔══██║██║░░██║░░░██║░░░██████████╗██╔══╝░░╚════██╗░╚═══██║░╚═══██║
 	███████╗██║░░██║╚█████╔╝░░░██║░░░╚██╔═██╔══╝███████╗██████╔╝░█████╔╝░█████╔╝
 	╚══════╝╚═╝░░╚═╝░╚════╝░░░░╚═╝░░░░╚═╝░╚═╝░░░╚══════╝╚═════╝░░╚════╝░░╚════╝░
-
-	Kod çalmaya geldiysen hoşgeldin yar : ) - laot
 	
 ]]
 
@@ -38,7 +36,7 @@ end)
 
 Citizen.CreateThread(function()
 	while LAOT == nil do
-		TriggerEvent('LAOTCore:getSharedObject', function(obj) LAOT = obj end)
+		TriggerEvent('LAOTCore:GetObject', function(obj) LAOT = obj end)
 		Citizen.Wait(0)
 	end
 
@@ -74,7 +72,7 @@ AddEventHandler('laot-gps:client:UseGPS', function()
 
 	end
 
-	LAOT.Notification("error", _U("LAOT_GPS_YOUDONTKNOW"))
+	LAOT.Functions.Notify("error", _U("LAOT_GPS_YOUDONTKNOW"))
 end)
 
 UseGPS = function()
